@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주문서</title>
+  <link rel="stylesheet" href="css/주문서.css">
+</head>
+<body>
+  <div id="container">
+    <h1>상품 주문서</h1>
+    <form name="order" action="aaa.jsp" method="post">
+      <fieldset class="dlfqjs">
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <label for="user-name">이름</label>
+            <input type="text" id="user-name" name="user-name" placeholder="여백없이 입력">
+          </li>
+          <li>
+            <label for="user-tel">연락처</label>
+            <input type="tel" id="user-tel" name="user-tel" placeholder="연락가능한 번호">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="dlfqjs">
+        <legend>배송지 정보</legend>
+        <ul>
+          <li>
+            <label for="add">주소</label>
+            <input type="text" id="add" name="add" size="38">
+          </li>
+          <li>
+            <label for="home-tel">전화번호</label>
+            <input type="tel" id="home-tel" name="home-tel">
+          </li>
+          <li>
+            <label for="memo">메모</label>
+            <textarea name="memo" id="memo" cols="40" rows="3"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="dlqjs">
+        <legend>주문 정보</legend>
+        <ul>
+          <li>
+            <label><input type="checkbox" name="cham">경북성주 참외(5kg)
+            <input type="number" id="cham" name="cham" min="0" max="10" value="0">Box</label>
+          </li>
+          <li>
+            <label><input type="checkbox" name="gra">경북영천 포도(5kg)
+            <input type="number" id="gra" name="gra" min="0" max="10" value="0">Box</label>
+          </li>
+          <li>
+            <label><input type="checkbox" name="melon">경북봉화 수박(5kg)
+            <input type="number" id="melon" name="melon" min="0" max="10" value="0">Box</label>
+          </li>
+        </ul>
+      </fieldset>
+      <article>
+        <button type="submit">주문하기</button>
+        <button type="reset">다시 작성</button>
+      </article>
+    </form>
+  </div>
+</body>
+</html>

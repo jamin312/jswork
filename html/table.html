@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>표</title>
+    <style>
+      table{
+        width: 80%;
+        border-spacing: 10px;
+        empty-cells: hide;
+        /* border-collapse: collapse; */
+      }
+      tbody,tfoot{
+        text-align: center;
+      }
+      tbody{
+        /* background-color: rgb(46, 160, 160); */
+      }
+      th,td{
+        border: 1px solid black;
+      }
+      thead{
+        background-color: pink;
+      }
+      tfoot{
+        background-color: gray;
+      }
+      div p{
+        width: 500px;
+        height: 60px;
+        background-color: mediumspringgreen;
+        text-align: center;
+        line-height: 60px;
+      }
+      .shadow{
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        width: 200px;
+        padding:10px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        /* box-shadow: 0px 0px 10px 5px #000; */
+        box-shadow: 0px 0px 10px 5px #000 inset;
+        border-top-left-radius: 40%;
+        border-top-right-radius: 40%;
+      }
+      nav{
+        background-color: #000;
+        padding: 10px;
+        /* height: 50px; */
+        overflow: hidden;
+        /* 부모가 크기를 가졌을 때 부모영역에서 넘친 자식은 보여주지마세요 */
+        /* 부모가 크기가 없을 때 float한 자식의 영역을 인정해줌 */
+      }
+      nav img{
+        width: 80px;
+        height: 80px;
+        float: left;
+      }
+      nav ul{
+        float: right;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 8.8px;
+      }
+      nav li{
+        color: #fff;
+        float: left;
+        list-style: none;
+        border: 1px solid #fff;
+        padding: 10px;
+        margin: 10px;
+      }
+     nav li:hover{
+      /* hover 마우스를 올리면 */
+      border-color: red;
+      }
+      #box1{
+        width: 100px;
+        height: 80px;
+        background-color: aqua;
+        text-align: center;
+        line-height: 80px;
+        position: relative;
+        top: -100px;
+        left: 100px;
+      }
+      #box2{
+        width: 300px;
+        height:300px;
+        background-color: yellow;
+        text-align: center;
+        position: relative;
+      }
+      #box2 div{
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+        border: 1px solid black;
+        position: absolute;
+      }
+      #b1{
+        top: 0px;
+        left: 0px;
+      }
+      #b2{
+        top: 0px;
+        right: 0px;
+      }
+      #b3{
+        bottom: 0px;
+        left: 0px;
+      }
+      #b4{
+        bottom: 0px;
+        right: 0px;
+      }
+      #b5{
+        top: 125px;
+        left: 125px;
+        z-index: 999;
+      }
+      #b6{
+        top: 120px;
+        left: 130px;
+        background-color: bisque;
+        z-index: 1000;
+      }
+      #b7{
+        top: 130px;
+        left: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>세로 정렬 가운데</p>
+    </div>
+    <nav>
+      <img src="img/레드향.jpg" alt="레드향">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+      </ul>
+    </nav>
+    <table>
+      <caption>파라다이스 객실</caption>
+      <thead>
+        <tr>
+          <th>방이름</th>
+          <th>대상</th>
+          <th>크기</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>핑크방</td>
+          <td>여성</td>
+          <td rowspan="3">4인실</td>
+          <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+          <td rowspan="2">보라방</td>
+          <td>동성</td>
+        </tr>
+        <tr>
+          <td>가족1팀</td>
+        </tr>
+        <tr>
+          <td>그린방</td>
+          <td></td>
+          <td>2인실</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4"><b>바깥채 전체를 렌트합니다</b></td>
+        </tr>
+      </tfoot>
+    </table>
+    <p class="shadow">박스그림자</p>
+    <div id="box1">
+      박스1
+    </div>
+    <div id="box2">박스2
+      <div id="b1">자식1</div>
+      <div id="b2">자식2</div>
+      <div id="b3">자식3</div>
+      <div id="b4">자식4</div>
+      <div id="b5">자식5</div>
+      <div id="b6">자식6</div>
+      <div id="b7">자식7</div>
+    </div>
+  </body>
+</html>

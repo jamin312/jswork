@@ -1,0 +1,32 @@
+    #container{
+      width: 540px;
+      margin: 0 auto;
+      border: 1px solid black;
+      padding: 20px;
+      line-height: 2em;
+    }
+    header{
+      border-bottom: 1px solid gray;
+    }
+    fieldset{
+      border: none;
+    }
+    legend{
+      font-weight: bold;
+    }
+    .dlfqjs label{
+      width: 176px;
+    }
+    .dlqjs{
+      padding-bottom: 0;
+    }
+    form label{
+      display: inline-block;
+      width: 80px;
+    }
+    form li{
+      list-style-type: none;
+    }
+    article{
+      text-align: center;
+    }

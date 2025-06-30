@@ -1,0 +1,53 @@
+#container{
+    width: 750px;
+    margin: 0 auto;
+}
+header{
+    background-color: #056697;
+    padding: 10px;
+    overflow: hidden;
+}
+h1{
+    float: left;
+    color: white;
+    margin: 10px;
+}
+nav{
+    float: right;
+    margin: 10px;
+}
+nav li{
+    float: left;
+    list-style: none;
+    padding: 5px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+main{
+    border: 5px solid skyblue;
+    overflow: hidden;
+    padding: 20px 10px;
+}
+img{
+    float: right;
+    width: 200px;
+    height: 480px;
+}
+section li{
+    line-height: 50px;
+}
+section ul{
+    list-style-type: square;
+}
+section ol{
+    list-style-type: lower-roman;
+}
+footer{
+    background-color: #056697;
+    text-align: center;
+    color: white;
+    padding: 9px;
+    font-style: italic;
+}

@@ -1,0 +1,26 @@
+#container{
+  width: 700px;
+  margin: 0 auto;
+}
+fieldset{
+  margin: 10px;
+}
+legend{
+  color: rgb(35, 189, 130);
+}
+form label{
+  float: left;
+  width: 100px;
+}
+form input{
+  width: 150px;
+}
+li{
+  list-style-type: none;
+}
+article{
+  text-align: center;
+}
+button{
+  cursor: pointer;
+}
