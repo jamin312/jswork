@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let com;
+    let me;
+
+    com = Math.floor(Math.random() * 3) + 1;
+    me = prompt('1:가위, 2:바위, 3:보 중 숫자를 입력하시오');
+
+    if (me == 1 && com == 3 || me == 2 && com == 1 || me == 3 && com == 2){
+      alert("승")
+    } else if(me == 1 && com == 1 || me == 2 && com == 2 || me == 3 && com == 3){
+      alert("무승부")
+    } else {
+      alert("패")
+    }
+
+    // if (me == 1) {
+    //   if (com == 1) {
+    //     alert("무승부");
+    //   } else if(com == 2){
+    //     alert("패");
+    //   } else {
+    //     alert("승");
+    //   }
+    // }
+    //   else if(me == 2) {
+    //     if (com == 1) {
+    //       alert("승");
+    //     } else if(com == 2){
+    //       alert("무승부");
+    //     } else {
+    //       alert("패");
+    //     }
+    //   } else {
+    //     if (com == 1) {
+    //       alert("패");
+    //     } else if(com == 2){
+    //       alert("승");
+    //     } else {
+    //       alert("무승부");
+    //     }
+    //   }
+  </script>
+</body>
+
+</html>

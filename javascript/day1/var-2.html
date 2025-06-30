@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //원의 면적을 구하는 프로그램 PI * R^2 //책 510p
+
+    //변수 선언 
+    let radius; //반지름
+    const PI = 3.14; //원주율(const는 불변)
+    let area; // 넓이
+
+    //반지름 입력(prompt)
+    radius = prompt('반지름을 입력하시오');
+
+    //넓이 계산
+    area = radius * radius * PI;
+    //let area = radius * radius * PI; // 순서를 고려하여 위치 생각 잘 해보기
+
+    //결과 출력
+    console.log('원의 넓이는 ' + area + '입니다.')
+    console.log('원의 반지름은 ' + radius + '입니다.')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //홀짝게임 (0:짝, 1:홀)
+
+    let com; // 컴퓨터가 만든 수
+    let me; // 내가 입력하는 수
+
+    //1~10 사이의 난수 생성
+    com = Math.floor(Math.random() * 10) + 1;
+
+    //0,1 중에서 입력
+    //while (true) {  
+      me = prompt('1~10 중에서 입력하시오');
+
+    
+      //정답 출력
+      if (me > com) {
+        alert("입력한 값이 크다")
+      } else if (me < com) {
+        alert("입력한 값이 작다")
+      } else {
+        alert("입력한 값이 같다")
+       //break;
+      }
+    //}
+  </script>
+</body>
+
+</html>

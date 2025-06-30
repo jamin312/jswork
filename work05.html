@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    while (true) {
+      let com = Math.floor(Math.random() * 2);
+      let me = prompt('숫자를 입력하시오')
+      if (me % 2 !== com) {
+        alert('틀렸다')
+      } else {
+        alert('같다')
+        break;
+      }
+    }
+  </script>
+</body>
+
+</html>
