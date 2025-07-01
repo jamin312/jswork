@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도전문제</title>
+</head>
+
+<body>
+  <h1>도전문제</h1>
+  <script>
+
+    /*
+    //수 입력
+    let a = prompt('수를 입력하시오')
+
+    //입력이 취소되면 -> 입력  취소 출력
+    if (a == null) {
+      alert('입력 취소');
+    }
+    //홀수면 홀수, 짝수면 짝수 출력
+    else if (a % 2 == 0) {
+      alert('짝수입니다.');
+    } else {
+      alert('홀수입니다.');
+    } */
+
+
+    //국어,영어,수학 점수 입력받아서 평균, 평가 출력
+
+    let kor = parseInt(prompt('국어 점수를 입력하시오'));
+    let eng = parseInt(prompt('영어 점수를 입력하시오'));
+    let mat = parseInt(prompt('수학 점수를 입력하시오'));
+    let avg = (kor + eng + mat) / 3;
+
+    console.log(`${avg}은 평균 점수입니다.`);
+    /* if (avg >= 90) {
+        console.log('수입니다');
+      } else if (avg >= 80) {
+        console.log('우입니다');
+      } else if (avg >= 70) {
+        console.log('미입니다');
+      } else if (avg >= 60) {
+        console.log('양입니다');
+      } else {
+        console.log('가입니다');
+      } */
+    // 수 우 미 양 가 저장된 변수를 생성하여 처리
+    let grade;
+
+    // 위에 grade를 수우미양가로 구분(avg가 ~점이상이면 ~다를 grade에 저장)
+    if (avg >= 90) {
+      grade = '수';
+    } else if (avg >= 80) {
+      grade = '우';
+    } else if (avg >= 70) {
+      grade = '미';
+    } else if (avg >= 60) {
+      grade = '양';
+    } else {
+      grade = '가';
+    }
+    console.log(avg + '점 -> ' + grade);
+
+    switch (parseInt(avg / 10)) {
+      case 10:
+      case 9: grade = '수'; break;
+      case 8: grade = '우'; break;
+      case 7: grade = '미'; break;
+      case 6: grade = '양'; break;
+      default: grade = '가';
+    }
+
+    console.log(avg + '점 -> ' + grade);
+
+    //평균을 7로 나눈 나머지 -> 요일 
+    // 0 -> 일요일 6 -> 토요일
+    let week = '';
+    switch (avg % 7) {
+      case 0: week = '일요일'; break;
+      case 1: week = '월요일'; break;
+      case 2: week = '화요일'; break;
+      case 3: week = '수요일'; break;
+      case 4: week = '목요일'; break;
+      case 5: week = '금요일'; break;
+      default: week = '토요일';
+    }
+    console.log(`${parseInt(avg % 7)}은 ${week}입니다.`);
+
+    let age = Number(prompt('나이를 입력하시오'));
+    (age >= 18) ? alert('판매 가능') : alert('판매 불가');
+  </script>
+</body>
+
+</html>

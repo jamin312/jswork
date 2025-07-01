@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      background-color: #ccc;
+      margin: 10px;
+      padding: 30px;
+      text-align: center;
+      float: left;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,6 +33,34 @@
       sum += i;
       i++
     } console.log(sum);*/
+
+    //중첩 반복문
+    let gugu=""
+    for (let i = 2; i <= 9; i++) {
+      gugu += `\t ${i}단 \n`;
+      for (let j = 1; j <= 9; j++) {
+        gugu += `${i} * ${j} = ${i * j} \n`;
+      }
+    } console.log(gugu);
+
+    //웹페이지 출력
+    //1단을 하나의 division으로 만듦
+    for (let i = 2; i <= 19; i++) {
+      document.write(`<div><h2>${i}단</h2>`);
+      for (let j = 1; j <= 9; j++) {
+        document.write(`${i} * ${j} = ${i * j}<br>`);
+      } document.write(`</div>`)
+    } 
+
+    //변수 활용
+    let gugudan = ""
+    for (let i = 2; i <= 9; i++) {
+      gugudan += `<div><h2>==${i}단==</h2>`;
+      for (let j = 1; j <= 9; j++) {
+        gugudan += `${i} * ${j} = ${i * j}<br>`;
+      } gugudan += `</div>`
+    } 
+    document.write(gugudan)
   </script>
 </body>
 
