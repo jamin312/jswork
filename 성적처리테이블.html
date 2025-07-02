@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성적처리t</title>
+  <style>
+    table,th,td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>성적처리</h3>
+  <script>
+    //성적처리 함수 선언
+    // let name= prompt('이름을 입력하시오');
+    // let kor = Number(prompt('국어성적을 입력하시오'));
+    // let eng = Number(prompt('영어성적을 입력하시오'));
+    // let mat = Number(prompt('수학성적을 입력하시오'));
+
+    let output = "";
+
+    function sungjuk(name, kor, eng, mat) {
+      let sum = kor + eng + mat;
+      let avg = Math.round(sum / 3);
+      let grade
+      switch (parseInt(avg / 10)) {
+        case 10:
+        case 9: grade = 'A'; break;
+        case 8: grade = 'B'; break;
+        case 7: grade = 'C'; break;
+        default: grade = 'F';
+      }
+      return (`<tr>
+                <td>${name}</td>
+                <td>${sum}</td>
+                <td>${avg}</td>
+                <td>${grade}</td>
+              </tr>`);
+    }
+
+    output += '<table>'
+    output += `<tr><th>이름</th><th>총점</th><th>평균</th><th>등급</th></tr>`;
+    output += sungjuk('aaa', 80, 75, 90);
+    output += sungjuk('bbb', 90, 88, 99);
+    output += sungjuk('ccc', 100, 85, 94);
+    output += '</table>'
+
+    document.write(output)
+
+    // document.write(`<table>
+    //   <tr>
+    //     <td>이름</td>
+    //     <td>총점</td>
+    //     <td>평균</td>
+    //     <td>등급</td>
+    //   </tr>
+    //   </table>)
+
+    //총점
+    //평균
+    //등급
+    //이름 총점 평균 등급 출력(콘솔창)
+    //필드명 출력(콘솔창)
+    //성적자료 넘김(함수 호출)
+  </script>
+</body>
+
+</html>

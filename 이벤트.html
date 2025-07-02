@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트</title>
+  <style>
+    img {
+      width: 300px;
+    }
+
+    button {
+      display: block;
+    }
+
+    #desc {
+      width: 300px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>상세설명 보기/닫기</h3>
+  <img src="../../html/img/레드향.jpg" alt="레드향">
+  <button type="button" id="open">상세설명보기</button>
+  <!-- <button type="button" id="open" onClick="show()">상세설명보기</button> -->
+  <!-- 인라인 방식으로 했을 때 -->
+  <div id="desc">
+    <h3>레드향</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Enim id incidunt optio eos pariatur consectetur expedita iure sunt libero ex tenetur natus debitis officia
+      ipsam quos cum nulla, totam reprehenderit.</p>
+    <!-- 인라인 방식으로 했을 때
+    <button type="button" id="close" onClick="closeF()">상세설명 닫기</button> -->
+    <button type="button" id="close">상세설명 닫기</button>
+  </div>
+
+  <script>
+    let showBtn = document.querySelector('#open');
+    let closeBtn = document.querySelector('#close');
+    let desc = document.querySelector('#desc');
+
+    showBtn.onclick = show;
+    closeBtn.onclick = closeF;
+
+    function show() {
+      desc.style.display = 'block';
+      showBtn.style.display = 'none';
+    }
+    function closeF() {
+      desc.style.display = 'none';
+      showBtn.style.display = 'block';
+    }
+
+    // 인라인 방식으로 했을 때
+    // function show(){
+    //   document.querySelector('#desc').style.display = 'block';
+    //   document.querySelector('#open').style.display = 'none';
+    // }
+    // function closeF(){
+    //   document.querySelector('#desc').style.display = 'none';
+    //   document.querySelector('#open').style.display = 'block';
+    // }
+  </script>
+</body>
+
+</html>

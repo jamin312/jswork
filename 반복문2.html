@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>repeat</title>
+  <style>
+    table,
+    td {
+      border: 1px solid #ccc;
+      /* border-collapse: collapse; */
+    }
+
+    td {
+      background-color: #ddd;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>반복문</h3>
+  <script>
+    //별찍기
+    for (let i = 1; i <= 5; i++) {
+      let stars = "";  //문자 취급을 하여야 연결가능
+      for (let j = 1; j <= i; j++) {
+        stars += "*";
+      }
+      console.log(stars);
+    }
+
+    //별찍기2
+    for (let i = 1; i <= 5; i++) {
+      let stars = "";
+      for (let j = 1; j <= 5 - i; j++) {
+        stars += " ";
+      }
+      for (let k = 1; k <= i; k++) {
+        stars += "*";
+      }
+      console.log(stars);
+    }
+
+    //별찍기3
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5 - i; j++) {
+        stars += " ";
+      }
+      for (let k = 1; k <= i; k++) {
+        stars += "*";
+      }
+      stars += "\n"
+    }
+    console.log(stars);
+
+    //별찍기4 다이아몬드모양 (1,3,5,7,5,3,1)
+
+    //자리 배치도
+    let personNum = Number(prompt('입장객 수를 입력하시오'));
+    let colNum = Number(prompt('한 줄에 앉을 사람 수를 입력하시오'));
+    let rowNum = parseInt(personNum / colNum); //줄 수
+    // rowNum = personNum % colNum == 0 ? rowNum : ++rowNum;
+    if (personNum % colNum != 0) {
+      rowNum++;
+    }
+    let seatNum = 0; //의자번호
+    let layout = `<table>
+    <caption> 자리배치도 </caption>`;
+
+    for (let i = 1; i <= rowNum; i++) {        //tr
+      layout += "<tr>";
+      for (let j = 1; j <= colNum; j++) {      //td
+        seatNum++;
+        layout += `<td>좌석 ${seatNum}</td>`;
+        if (personNum <= seatNum) {
+          break;
+        }
+      } layout += "</tr>";
+    }
+    layout += "</table>";
+    document.write(layout);
+
+  </script>
+</body>
+
+</html>

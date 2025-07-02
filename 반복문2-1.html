@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>repeat2</title>
+
+</head>
+
+<body>
+  <h3>반복문</h3>
+  <script>
+   
+    //min에서 max까지 홀수합과 짝수합 구하기
+    let min = Number(prompt('최솟값을 입력하시오'));
+    let max = Number(prompt('최댓값을 입력하시오'));
+    let even = 0;
+    let odd = 0;
+
+    for(let i = min; i <= max; i++){
+      if(i % 2 == 0){
+        even += i;
+      } else {
+        odd += i;
+      }
+    }
+    console.log(`짝수합은 ${even}이며, 홀수합은 ${odd}입니다.`);
+  </script>
+</body>
+</html>
