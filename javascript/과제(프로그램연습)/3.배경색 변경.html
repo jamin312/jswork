@@ -22,9 +22,6 @@
             border: 1px solid #ccc;
             margin: 10px 0;
         }
-        .bgcolor{
-            background-color: yellowgreen;
-        }
     </style>
 </head>
 <body>
@@ -35,17 +32,11 @@
             <li onclick="change('purple')">purple</li>
         </ul>
         <div id="result"></div>
-        <button type="button" id="bg">배경색</button>
+        <button type="button" id="bgBtn">배경색</button>
     </div>
 
     <script>
-        function change(bgcolor){
-            document.querySelector('#result').style.backgroundColor = bgcolor
-        }
-
-        document.querySelector('#bg').onclick = function(){
-            document.body.classList.toggle('bgcolor');
-        }
+       
     </script>
 </body>
 </html>

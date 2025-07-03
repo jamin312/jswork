@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+</head>
+
+<body>
+  <h3>객체(object)</h3>
+  <script>
+    //객체
+    let person = {
+      name: '홍길동',
+      age: '25',
+      job: 'programmer',
+      eat: function (food) {
+        console.log(`${food} 먹어요`)
+      }
+    }
+
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.job);
+    // console.log(person.eat('빵')); // console.log가 function에도 있고 출력에도 console.log가 중복 사용되어 undifined가 나옴
+    person.eat(`빵`);
+
+    //추가
+    console.log(person);
+    person.haircolor = "파랑";
+    person.run = function () {
+      console.log(`${this.name} 달린다`);
+    }
+
+    person.run();
+
+    //삭제
+    delete person.haircolor;
+
+    //product 생성자 함수 
+    function Product(name, weight, price) {
+      this.name = name,
+        this.weight = weight,
+        this.price = price
+    }
+    Product.prototype.calc = function (w) {
+      return w / this.weight * this.price;
+    }
+    //객체 생성
+    let sam = new Product('삼겹살', '100', 1500);
+    let galbi = new Product('갈비살', '100', 10000); 
+    let result = sam.calc(1000);
+
+    console.log(`${sam.name} = ${result}원 입니다.`)
+    result = galbi.calc(500);
+    console.log(`${galbi.name} = ${result}원 입니다.`)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장객체</title>
+</head>
+
+<body>
+  <h3>내장객체</h3>
+  <script>
+    //날짜 객체
+    let today = new Date();
+    console.log(today);
+    let year = today.getFullYear();
+    let month = today.getMonth();
+    let day = today.getDate();
+    let week = today.getDay();
+    let weekStr;
+    switch (week) {
+      case 0: weekStr = '일요일'; break;
+      case 1: weekStr = '월요일'; break;
+      case 2: weekStr = '화요일'; break;
+      case 3: weekStr = '수요일'; break;
+      case 4: weekStr = '목요일'; break;
+      case 5: weekStr = '금요일'; break;
+      case 6: weekStr = '토요일'; break;
+    }
+
+    console.log(`${year}년 ${month + 1}월 ${day}일 ${weekStr}`);
+    console.log(new Date(1));
+    console.log(new Date(1751515533809));
+    console.log(today.getTime());
+    console.log(today.toLocaleDateString());
+
+    //크리스마스가 몇 일 남았나?
+    let xmas = new Date("2025-12-25");
+    let remain = xmas - today;
+    if ((remain % (1000 * 60 * 60 * 24)) != 0) {
+      remain = parseInt(remain / (1000 * 60 * 60 * 24)) + 1
+    } else {
+      remain = parseInt(remain / (1000 * 60 * 60 * 24))
+    }
+    let firstDay = new Date("2025-06-16");
+    let passDay = parseInt((today - firstDay) / (1000 * 60 * 60 * 24));
+    console.log(remain + '일 남았음');
+    console.log(passDay + '일 지났음');
+
+    //로또 생성기
+    // let lotto = '';
+    // for (let i = 1; i <= 5; i++) {
+    //   for (let j = 1; j <= 6; j++) {
+    //     lotto += Math.round(Math.random() * 45 + 1) + '\t';
+    //   } lotto += '\n';
+    // } console.log(lotto);
+
+    //배열을 이용한 로또 생성기
+    for (let i = 0; i < 5; i++) {
+      let lotto = [];
+      for (let j = 0; j < 6; j++) {
+        let ranNum = Math.round(Math.random() * 45) + 1;
+        if (lotto.indexOf(ranNum) == -1) {
+          lotto.push(ranNum);
+        } else {
+          j--;
+        }
+      } console.log(lotto.join(':'))
+    } 
+  </script>
+</body>
+
+</html>
