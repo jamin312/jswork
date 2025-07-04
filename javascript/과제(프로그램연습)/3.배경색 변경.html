@@ -22,6 +22,9 @@
             border: 1px solid #ccc;
             margin: 10px 0;
         }
+        .redn{
+            background-color: red;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +39,12 @@
     </div>
 
     <script>
-       
+        function change(bgcolor){
+            document.querySelector('#result').style.backgroundColor = bgcolor
+        }
+        document.querySelector('#bgBtn').onclick = function(){
+            document.body.classList.toggle('redn');
+        }
     </script>
 </body>
 </html>

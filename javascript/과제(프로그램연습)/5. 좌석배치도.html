@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>좌석배치도</title>
     <style>
-        table{
+        table {
             /* border: 1px solid #ccc; */
             border-collapse: collapse;
             empty-cells: hide;
             margin-top: 30px;
 
         }
-        td{
+
+        td {
             border: 1px solid #ccc;
             padding: 5px;
         }
     </style>
 </head>
+
 <body>
     <h1>좌석배치도</h1>
     <form name="output">
@@ -30,7 +33,33 @@
     <div id="layout"></div>
 
     <script>
-        
+        let per = document.querySelector('#person');
+        let line = document.querySelector('#colNum');
+        let prt = document.querySelector('#layout');
+        let play = document.querySelector('#btn');
+
+        play.onclick = tbout;
+
+        function tbout() {
+            let tb = "<table>";
+            let count = 1;
+            let row = Math.ceil(per.value / line.value);
+            for (let i = 1; i <= row; i++) {
+            tb += '<tr>'
+            for (let j = 1; j <= line.value ; j++) {
+                tb += `<td>좌석 : ${count} </td>`
+                count++;
+                if(per.value < count){
+                    break;
+                }
+            }
+            tb += '</tr>'
+        } 
+        tb += '</table>'
+        prt.innerHTML = tb
+    }
+
     </script>
 </body>
+
 </html>

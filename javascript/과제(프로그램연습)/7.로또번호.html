@@ -35,21 +35,20 @@
         <div id="lotto"></div>
     </div>
     <script>
-        let autoBtn = document.querySelector('#btn');
+        let play = document.querySelector('#btn');
         let result = document.querySelector('#lotto');
-        // autoBtn.onclick = lottoM;
-        autoBtn.addEventListener('click', lottoM);
+        play.onclick = create
 
-        function lottoM() {
-            let autoNum = [];
+        function create() {
+            let ranNum = [];
             for (let i = 0; i < 6; i++) {
                 let lottoNum = Math.round(Math.random() * 45) + 1;
-                if (autoNum.indexOf(lottoNum) == -1) {
-                    autoNum.push(lottoNum);
+                if (ranNum.indexOf(lottoNum) == -1) {
+                    ranNum.push(lottoNum);
                 } else {
                     i--;
                 }
-            } result.innerHTML = autoNum.join(' , ');
+            } result.innerHTML = ranNum.join(' , ')
         }
     </script>
 </body>

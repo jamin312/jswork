@@ -42,7 +42,23 @@
   </div>
 
   <script>
-   
+   let row = document.querySelector('#rCount');
+   let col = document.querySelector('#cCount');
+   let play = document.querySelector('#btn');
+   let result = document.querySelector('#contents');
+
+   play.onclick = pro
+
+   function pro(){
+    let layout = '<table>';
+    for(let i =1; i <= row.value; i++){
+      layout += '<tr>';
+      for(let j=1; j <= col.value; j++){
+        layout += `<td>${i}, ${j}</td>`;
+      } layout += '</tr>'
+    } layout += '</table>'
+      result.innerHTML = layout;
+   }
   </script>
 </body>
 </html>
